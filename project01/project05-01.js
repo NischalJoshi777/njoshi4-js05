@@ -65,8 +65,6 @@ function countdown(){
 
 
 
-
-
 /*------------- Function to check the student answers ----------------*/
 function checkAnswers() {
    let correctCount = 0;
