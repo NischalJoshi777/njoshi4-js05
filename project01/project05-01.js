@@ -12,7 +12,7 @@
 
 // Constants to set the time given for the quiz in seconds
 // and the correct answers to each quiz question
-const quizTime = 90;
+const quizTime = 10;
 const correctAnswers = ["10", "4", "-6", "5", "-7"];
 
 // Declare the ID for timed commands
@@ -44,10 +44,11 @@ function countdown(){
       let totalCorrect = checkAnswers();
 
       if(totalCorrect === correctAnswers.length){
-         window.alert('Congratulations! You got 100 %.');
+         window.alert('Congratulations! You got 100%.');
       } else {
-         const incorrectAnswers = correctAnswers.length - totalCorrect;
-         window.alert(`You answered ${incorrectAnswers} answers incorrectly out of ${correctAnswers.length} questions.`)
+         // const incorrectAnswers = correctAnswers.length - totalCorrect;
+         //showing the total question user answered correctly out of total questions.
+         window.alert(`You got ${totalCorrect} out of ${correctAnswers.length}.`)
          //reseting the time
          timeLeft = quizTime;
          //setting the quick clock value
@@ -60,9 +61,6 @@ function countdown(){
       quizClock.value = timeLeft;
    }
 }
-
-
-
 
 
 /*------------- Function to check the student answers ----------------*/
